@@ -160,9 +160,7 @@ try {
 
 In old version (`com.microsoft.azure-mgmt-**`), `rxJava` is used for non-blocking applications
 
-In new version (`com.azure.resourcemanager.**`), we have adopted `Reactor` as the main library in replacement of `rxJava`
-
-The detailed usage can be found in the sample link below:
+In new version (`com.azure.resourcemanager.**`), we have adopted `Reactor` as the main library in replacement of `rxJava` due to the Azure Core adoption.
 
 **In old version (`com.microsoft.azure-mgmt-**`)**
 
@@ -215,9 +213,8 @@ azure.publicIPAddresses().define(publicIpName).withRegion(region).withExistingRe
 	}
 });
 ``` 
-Complete Code Sammple:
 
-[Link to full sample](https://github.com/Azure/azure-libraries-for-java/blob/master/azure-samples/src/main/java/com/microsoft/azure/management/compute/samples/ManageVirtualMachineScaleSetAsync.java#L100)
+[**Link to full sample**](https://github.com/Azure/azure-libraries-for-java/blob/master/azure-samples/src/main/java/com/microsoft/azure/management/compute/samples/ManageVirtualMachineScaleSetAsync.java#L100)
       
 
 **Equivalent in new version (`com.azure.resourcemanager.**`)**
@@ -271,9 +268,8 @@ azure.networks().define(vnetName).withRegion(region).withExistingResourceGroup(r
 	return Flux.just(indexable);
 }).last().block();
 ```
-Complete Code Sammple:
 
-[Link to full sample](https://github.com/Azure/azure-sdk-for-java/blob/7beda69/sdk/management/samples/src/main/java/com/azure/resourcemanager/compute/samples/ManageVirtualMachineScaleSetAsync.java#L98)
+[**Link to full sample**](https://github.com/Azure/azure-sdk-for-java/blob/7beda69/sdk/management/samples/src/main/java/com/azure/resourcemanager/compute/samples/ManageVirtualMachineScaleSetAsync.java#L98)
 
 ## Additional Samples 
 
